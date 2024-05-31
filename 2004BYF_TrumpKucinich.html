@@ -175,7 +175,7 @@ campaignTrail_temp.questions_json = [
         "pk": 360,
         "fields": {
             "priority": 3,
-            "description": "Do you believe it is appropriate for Hillary Clinton to run for Senate in the state of New York -- a state where she has never lived?",
+            "description": "Uh oh. There has been a lot of discussion about your marital life, including your divorces from your last two wives and your extramarital affair with your first wife. Do you wish to comment on this?",
             "likelihood": 1
         }
     },
@@ -544,31 +544,7 @@ campaignTrail_temp.answers_json = [
         "pk": 3374,
         "fields": {
             "question": 360,
-            "description": "This seems like another attempt by the Clintons to stretch the rules. Hillary Clinton is clearly from Arkansas and should seek office from that state if she so desires."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 3375,
-        "fields": {
-            "question": 360,
-            "description": "I don't have any comment. I trust the people of New York to make the right decision on this issue."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 3376,
-        "fields": {
-            "question": 360,
-            "description": "Off the record, I am uncomfortable with this, but I prefer not to make a public statement about it."
-        }
-    },
-    {
-        "model": "campaign_trail.answer",
-        "pk": 3377,
-        "fields": {
-            "question": 360,
-            "description": "The Clintons have added a greatly to the political life of the United States. I support Hillary Clinton in her campaign."
+            "description": "I am sorry about what has happened, and this has been settled years ago. But I'm sure this is part of a plot to steal the election in favor of George Bush."
         }
     },
     {
@@ -841,6 +817,14 @@ campaignTrail_temp.answers_json = [
         "fields": {
             "question": 364,
             "description": "We need to be tough on Saddam, we do. I only support the Iraq War because it had Congressional approval. But this war has been a disaster, we clearly rushed in there with corrupt, failed intelligence and NATO isn't even involved. What the hell is wrong with our leaders?"
+        }
+    },
+    {
+        "model": "campaign_trail.answer",
+        "pk": 9530,
+        "fields": {
+            "question": 360,
+            "description": "I'm kinda thinking about Jack Kennedy. Remember his speech about his religion? I'm gonna do that about this whole woman thing, and I'm sure I'll get a huge boost in support like you've never seen before."
         }
     }
 ]
@@ -5871,16 +5855,6 @@ campaignTrail_temp.answer_score_global_json = [
     },
     {
         "model": "campaign_trail.answer_score_global",
-        "pk": 1154,
-        "fields": {
-            "answer": 3377,
-            "candidate": 77,
-            "affected_candidate": 77,
-            "global_multiplier": -0.0125
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
         "pk": 1159,
         "fields": {
             "answer": 3389,
@@ -6096,17 +6070,7 @@ campaignTrail_temp.answer_score_global_json = [
             "answer": 3374,
             "candidate": 78,
             "affected_candidate": 78,
-            "global_multiplier": -0.0125
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1216,
-        "fields": {
-            "answer": 3374,
-            "candidate": 78,
-            "affected_candidate": 79,
-            "global_multiplier": 0.04
+            "global_multiplier": -0.025
         }
     },
     {
@@ -6317,26 +6281,6 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 78,
             "affected_candidate": 79,
             "global_multiplier": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1293,
-        "fields": {
-            "answer": 3377,
-            "candidate": 79,
-            "affected_candidate": 78,
-            "global_multiplier": 0.004
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_global",
-        "pk": 1294,
-        "fields": {
-            "answer": 3377,
-            "candidate": 79,
-            "affected_candidate": 79,
-            "global_multiplier": -0.15
         }
     },
     {
@@ -6597,6 +6541,16 @@ campaignTrail_temp.answer_score_global_json = [
             "candidate": 78,
             "affected_candidate": 78,
             "global_multiplier": -0.03
+        }
+    },
+    {
+        "model": "campaign_trail.answer_score_global",
+        "pk": 9532,
+        "fields": {
+            "answer": 9530,
+            "candidate": 78,
+            "affected_candidate": 78,
+            "global_multiplier": -0.06
         }
     }
 ]
@@ -7088,36 +7042,6 @@ campaignTrail_temp.answer_score_issue_json = [
         "fields": {
             "answer": 3340,
             "issue": 28,
-            "issue_score": 0.65,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 1039,
-        "fields": {
-            "answer": 3374,
-            "issue": 31,
-            "issue_score": -0.65,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 1040,
-        "fields": {
-            "answer": 3376,
-            "issue": 31,
-            "issue_score": 0,
-            "issue_importance": 1
-        }
-    },
-    {
-        "model": "campaign_trail.answer_score_issue",
-        "pk": 1041,
-        "fields": {
-            "answer": 3377,
-            "issue": 31,
             "issue_score": 0.65,
             "issue_importance": 1
         }
@@ -7750,42 +7674,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 761,
-        "fields": {
-            "answer": 3374,
-            "candidate": 77,
-            "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 762,
-        "fields": {
-            "answer": 3375,
-            "candidate": 77,
-            "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 763,
-        "fields": {
-            "answer": 3376,
-            "candidate": 77,
-            "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 764,
-        "fields": {
-            "answer": 3377,
-            "candidate": 77,
-            "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 768,
         "fields": {
             "answer": 3385,
@@ -8069,34 +7957,7 @@ campaignTrail_temp.answer_feedback_json = [
         "fields": {
             "answer": 3374,
             "candidate": 78,
-            "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 860,
-        "fields": {
-            "answer": 3375,
-            "candidate": 78,
-            "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 861,
-        "fields": {
-            "answer": 3376,
-            "candidate": 78,
-            "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 862,
-        "fields": {
-            "answer": 3377,
-            "candidate": 78,
-            "answer_feedback": "As a Democrat, there's nothing wrong with showing your support for the Clintons."
+            "answer_feedback": "Extramarital affairs can hurt politicians' careers forever, and you're likely to join the bunch."
         }
     },
     {
@@ -8371,42 +8232,6 @@ campaignTrail_temp.answer_feedback_json = [
     },
     {
         "model": "campaign_trail.answer_feedback",
-        "pk": 956,
-        "fields": {
-            "answer": 3374,
-            "candidate": 79,
-            "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 957,
-        "fields": {
-            "answer": 3375,
-            "candidate": 79,
-            "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 958,
-        "fields": {
-            "answer": 3376,
-            "candidate": 79,
-            "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
-        "pk": 959,
-        "fields": {
-            "answer": 3377,
-            "candidate": 79,
-            "answer_feedback": "There's not much to be gained by commenting on the Clintons or inserting yourself into New York politics."
-        }
-    },
-    {
-        "model": "campaign_trail.answer_feedback",
         "pk": 964,
         "fields": {
             "answer": 3382,
@@ -8502,6 +8327,15 @@ campaignTrail_temp.answer_feedback_json = [
             "answer": 3490,
             "candidate": 78,
             "answer_feedback": "The Bush campaign releases an attack ad with you saying this on hot-mic. Not looking good. At all."
+        }
+    },
+    {
+        "model": "campaign_trail.answer_feedback",
+        "pk": 9531,
+        "fields": {
+            "answer": 9530,
+            "candidate": 78,
+            "answer_feedback": "Yeah... no. Not only is this a massive flop, but extramarital affairs have sent a lot of politicians out of office over the years. It even hit the last Democratic President Bill Clinton. "
         }
     }
 ]
