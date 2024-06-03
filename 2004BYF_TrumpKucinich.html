@@ -7065,7 +7065,7 @@ campaignTrail_temp.answer_score_issue_json = [
         "pk": 9533,
         "fields": {
             "answer": 3344,
-            "issue": "27",
+            "issue": 27,
             "issue_score": 0.55,
             "issue_importance": 5
         }
@@ -8022,6 +8022,57 @@ campaignTrail_temp.running_mate_image_url = "https://upload.wikimedia.org/wikipe
 campaignTrail_temp.candidate_last_name = "Trump";
 campaignTrail_temp.running_mate_last_name = "Kucinich";
 
+campaignTrail_temp.multiple_endings = true;
+endingPicker = (out, totv, aa, quickstats) => {
+
+    function setImage(url) {
+        if(url == '' || url == null) return;
+        let interval = setInterval(function () {
+            img = document.getElementsByClassName("person_image")[0];
+            if (img != null) {
+                img.src = url;
+                clearInterval(interval);
+            }
+        }, 50);
+    }
+
+    if(quickstats[0] == 0) {
+        setImage("https://assets.apnews.com/07/60/bef8fc9ba9606c5d6464c0ece6e8/bbb6e29ba3c14f5ebdaf39747214d93b");
+        return `<h3>This was clearly rigged.</h3><p>There is absolutely no way that you didn't get a single electoral vote. Not even Washington DC? <p><p>But you're too shocked to even make a statement, so you just go back to Trump Tower and go to sleep for the night. <p><p>All of a sudden, you wake up in your bedroom at Mar-a-Lago. It is not 2004. It is 2019. You are the President after defeating Hillary Clinton in the 2016 election, and you are a Republican for crying out loud. <p><p>All the while, you see that the House of Representatives has impeached you over obstruction of Congress and abuse of power after you pressured Ukraine to investigate Sleepy Joe Biden. <p><p>Will you get impeached by the Senate and removed from office? If so, what happens in 2020? <p><p>You, the player, will find out when my eleventh mod, 2020: Impeachment, releases in July or August 2024. </p>`;
+    }
+    if(quickstats[0] > 0) {
+        setImage("https://i.imgur.com/kHcnbty.png");
+        return `<h3>Hasta la vista, Donald!</h3><p>Those were the first words in President Bush's victory speech. He terminated you so much, to the likes of Walter Mondale and George McGovern. In other words, you did worse than Michael Dukakis sixteen years ago and he screwed up at a level fairly similar to you. As of the moment, if you're not a Southern Democrat, you are gonna get crushed.<p><p>Many of your top supporters are calling the election rigged against you, but we will just have to find the evidence of a stolen election like 2000. But nevertheless, most Democrats are seeing the mistake they made by nominating you and are already looking to 2008. Maybe a Southern Democrat like Hillary Clinton, John Edwards, or Al Gore becomes the Democratic nominee and wins the presidency back for the Democrats? </p>`;
+    }
+    if(quickstats[0] > 112) {
+        setImage("");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[0] > 217) {
+        setImage("https://politics.georgetown.edu/wp-content/uploads/sites/24/2022/01/Jan-6-2000x1125.jpeg");
+        return `<h3>Time For Revenge!</h3><p>We were up big league all across this beautiful country. We clearly won Missouri. We clearly won Ohio. We clearly won Arkansas. We clearly won Florida. We clearly won Tennessee. And quite frankly, Al Gore did too. <p><p>If you've had enough of the Supreme Court and the political establishment stealing elections, grabbing power, and doing nothing for you, it is time to stand up and fight. Fight for your country. Fight for you and everyday hard-working Americans. We have had enough, and if we need to go to the Capitol to get our voices heard, that is what we will do. It is time to seek Revenge and Retribution against the disaster of the last four years!</p>`;
+    }
+    if(quickstats[0] == 269) {
+        setImage("https://i0.wp.com/demcastusa.com/wp-content/uploads/2020/07/269-vs-269.png?fit=560%2C315&ssl=1");
+        return `<h3>2000 was bad enough, now this?</h3><p>Four years ago, Florida was decided by 537 votes and a Supreme Court ruling. Now we have no winner at all? This election will clearly be rigged. Just look at the crooked Republican Congress. Are you sure they're not gonna steal the election for Dopey W. Bush like they did four years ago from Almighty Al? <p><p>In other words, the Electoral College is a total disaster, because the Supreme Court and Congress can literally decide who is in power. That is how George Bush got into office both in 2000 and now in 2004. I remember the days of Bill Clinton where there were huge landslides and the people handed him the election both in 92 and 96. Now we have this total catastrophe, and we're not standing for it anymore. We want Revenge and Retribution!</p>`;
+    }
+    if(quickstats[0] > 269) {
+        setImage("");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[0] > 306) {
+        setImage("");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[0] > 379) {
+        setImage("");
+        return `Put ending text here, you can and should use <p>HTML tags</p>!`;
+    }
+    if(quickstats[0] == 538) {
+        setImage("https://cf.geekdo-images.com/Z2554vyl_R3BooAmi1IaWw__opengraph/img/vAogjzWTzssNIrIgWot49WqQrQY=/0x0:2500x1313/fit-in/1200x630/filters:strip_icc()/pic1175306.jpg");
+        return `<h3>Bush, You're Fired!</h3><p>Look at our unbelievable victory, nobody in the history of this country has been able to win as bigly as we did tonight. 538 electoral votes for Trump. We have successfully avenged George W. Bush and the Republicans after stealing the election and cheating to win the 2000 election in Florida, and this election was not even close. There is convincing evidence that the American people legitimately wanted this for Al Gore in 2000 and now they're voting for me to seek revenge and retribution from the disaster of 2000. <p><p>There is one thing I will say to the President: Bush, You're Fired!</p>`;
+    }
+}
 
 
 campaignTrail_temp.jet_data = [{
@@ -8037,8 +8088,90 @@ campaignTrail_temp.jet_data = [{
         "runName": "Kucinich",
         "runImage": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Dennis_Kucinich.jpg"
     },
-    "endings_enabled": false,
-    "ending_data": {}
+    "endings_enabled": true,
+    "ending_data": {
+        "1717438486590": {
+            "id": 1717438486590,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://assets.apnews.com/07/60/bef8fc9ba9606c5d6464c0ece6e8/bbb6e29ba3c14f5ebdaf39747214d93b",
+            "endingText": "<h3>This was clearly rigged.</h3><p>There is absolutely no way that you didn't get a single electoral vote. Not even Washington DC? <p><p>But you're too shocked to even make a statement, so you just go back to Trump Tower and go to sleep for the night. <p><p>All of a sudden, you wake up in your bedroom at Mar-a-Lago. It is not 2004. It is 2019. You are the President after defeating Hillary Clinton in the 2016 election, and you are a Republican for crying out loud. <p><p>All the while, you see that the House of Representatives has impeached you over obstruction of Congress and abuse of power after you pressured Ukraine to investigate Sleepy Joe Biden. <p><p>Will you get impeached by the Senate and removed from office? If so, what happens in 2020? <p><p>You, the player, will find out when my eleventh mod, 2020: Impeachment, releases in July or August 2024. </p>",
+            "amount": "0"
+        },
+        "1717438490736": {
+            "id": 1717438490736,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://i.imgur.com/kHcnbty.png",
+            "endingText": "<h3>Hasta la vista, Donald!</h3><p>Those were the first words in President Bush's victory speech. He terminated you so much, to the likes of Walter Mondale and George McGovern. In other words, you did worse than Michael Dukakis sixteen years ago and he screwed up at a level fairly similar to you. As of the moment, if you're not a Southern Democrat, you are gonna get crushed.<p><p>Many of your top supporters are calling the election rigged against you, but we will just have to find the evidence of a stolen election like 2000. But nevertheless, most Democrats are seeing the mistake they made by nominating you and are already looking to 2008. Maybe a Southern Democrat like Hillary Clinton, John Edwards, or Al Gore becomes the Democratic nominee and wins the presidency back for the Democrats? </p>",
+            "amount": "0"
+        },
+        "1717438492885": {
+            "id": 1717438492885,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "112"
+        },
+        "1717438501242": {
+            "id": 1717438501242,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "https://politics.georgetown.edu/wp-content/uploads/sites/24/2022/01/Jan-6-2000x1125.jpeg",
+            "endingText": "<h3>Time For Revenge!</h3><p>We were up big league all across this beautiful country. We clearly won Missouri. We clearly won Ohio. We clearly won Arkansas. We clearly won Florida. We clearly won Tennessee. And quite frankly, Al Gore did too. <p><p>If you've had enough of the Supreme Court and the political establishment stealing elections, grabbing power, and doing nothing for you, it is time to stand up and fight. Fight for your country. Fight for you and everyday hard-working Americans. We have had enough, and if we need to go to the Capitol to get our voices heard, that is what we will do. It is time to seek Revenge and Retribution against the disaster of the last four years!</p>",
+            "amount": "217"
+        },
+        "1717438526354": {
+            "id": 1717438526354,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://i0.wp.com/demcastusa.com/wp-content/uploads/2020/07/269-vs-269.png?fit=560%2C315&ssl=1",
+            "endingText": "<h3>2000 was bad enough, now this?</h3><p>Four years ago, Florida was decided by 537 votes and a Supreme Court ruling. Now we have no winner at all? This election will clearly be rigged. Just look at the crooked Republican Congress. Are you sure they're not gonna steal the election for Dopey W. Bush like they did four years ago from Almighty Al? <p><p>In other words, the Electoral College is a total disaster, because the Supreme Court and Congress can literally decide who is in power. That is how George Bush got into office both in 2000 and now in 2004. I remember the days of Bill Clinton where there were huge landslides and the people handed him the election both in 92 and 96. Now we have this total catastrophe, and we're not standing for it anymore. We want Revenge and Retribution!</p>",
+            "amount": "269"
+        },
+        "1717438533161": {
+            "id": 1717438533161,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "269"
+        },
+        "1717438539006": {
+            "id": 1717438539006,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "306"
+        },
+        "1717438613834": {
+            "id": 1717438613834,
+            "variable": 0,
+            "operator": ">",
+            "value": 0,
+            "endingImage": "",
+            "endingText": "Put ending text here, you can and should use <p>HTML tags</p>!",
+            "amount": "379"
+        },
+        "1717438621857": {
+            "id": 1717438621857,
+            "variable": 0,
+            "operator": "==",
+            "value": 0,
+            "endingImage": "https://cf.geekdo-images.com/Z2554vyl_R3BooAmi1IaWw__opengraph/img/vAogjzWTzssNIrIgWot49WqQrQY=/0x0:2500x1313/fit-in/1200x630/filters:strip_icc()/pic1175306.jpg",
+            "endingText": "<h3>Bush, You're Fired!</h3><p>Look at our unbelievable victory, nobody in the history of this country has been able to win as bigly as we did tonight. 538 electoral votes for Trump. We have successfully avenged George W. Bush and the Republicans after stealing the election and cheating to win the 2000 election in Florida, and this election was not even close. There is convincing evidence that the American people legitimately wanted this for Al Gore in 2000 and now they're voting for me to seek revenge and retribution from the disaster of 2000. <p><p>There is one thing I will say to the President: Bush, You're Fired!</p>",
+            "amount": "538"
+        }
+    }
 }
 ]
 
